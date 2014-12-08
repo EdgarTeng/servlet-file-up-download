@@ -15,10 +15,19 @@ import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
+/**
+ * 
+ * @author tzz1002@gmail.com
+ *
+ */
 public class PostForm {
 	private Map<String, String> formFieldMap = new HashMap<String, String>();
 	private Map<String, FileItem> fileMap = new HashMap<String, FileItem>();
 
+	/**
+	 * Constructor method
+	 * @param request
+	 */
 	public PostForm(HttpServletRequest request) {
 		super();
 		// Check that we have a file upload request
@@ -54,12 +63,6 @@ public class PostForm {
 					formFieldMap.put(name, value);
 				} else {
 					// processUploadedFile
-					/*
-					 * String fieldName = item.getFieldName(); String fileName =
-					 * item.getName(); String contentType =
-					 * item.getContentType(); boolean isInMemory =
-					 * item.isInMemory(); long sizeInBytes = item.getSize();
-					 */
 					fileMap.put(item.getFieldName(), item);
 				}
 			}
