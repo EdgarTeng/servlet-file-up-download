@@ -3,6 +3,7 @@ package com.tenchael.file.util;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+
 /**
  * 
  * @author tzz1002@gmail.com
@@ -11,8 +12,11 @@ import java.io.OutputStream;
 public class FileUtil {
 	/**
 	 * read from inputStream and write to outputStream
-	 * @param in Inputstream
-	 * @param out OutputStream
+	 * 
+	 * @param in
+	 *            Inputstream
+	 * @param out
+	 *            OutputStream
 	 * @throws IOException
 	 */
 	public static void readAndWrite(InputStream in, OutputStream out)
@@ -31,4 +35,5 @@ public class FileUtil {
 		}
 		out.flush();
 	}
+
 }

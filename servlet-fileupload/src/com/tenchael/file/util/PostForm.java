@@ -89,9 +89,4 @@ public class PostForm {
 		return fileMap.values();
 	}
 
-	public static String getSuffix(String contentType) {
-		return contentType.substring(contentType.indexOf("/") + 1,
-				contentType.length());
-	}
-
 }
